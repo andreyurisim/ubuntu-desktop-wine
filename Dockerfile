@@ -1,8 +1,5 @@
 FROM ubuntu:21.04
 
-# https://github.com/theasp/docker-novnc
-# https://github.com/chenjr0719/Docker-Ubuntu-Unity-noVNC
-
 ENV USER=ubuntu \
     HOME=/home/ubuntu \
     SUDO=yes \
