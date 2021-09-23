@@ -34,13 +34,13 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         libreoffice \
         vim \
         tigervnc-standalone-server && \
-    
+    \
     cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html && \
-
+    \
     add-apt-repository -y ppa:kubuntu-ppa/backports && \
     apt-get update && \
     apt-get install -y kubuntu-desktop && \
-
+    \
     dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     sudo -H gpg -o /etc/apt/trusted.gpg.d/winehq.key.gpg --dearmor winehq.key && \
@@ -48,7 +48,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     add-apt-repository -y 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main' && \
     apt-get update && \
     apt-get install -y --install-recommends winehq-stable && \
-    
+    \
     apt-get autoclean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
