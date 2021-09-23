@@ -12,7 +12,7 @@ ENV USER=ubuntu \
     DISPLAY_HEIGHT=900
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    adduser $USER --disabled-password && \
+    adduser $USER --gecos "" --disabled-password && \
     apt-get update && \
     apt-get install -y \
         sudo \
