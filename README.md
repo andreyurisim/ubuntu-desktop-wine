@@ -37,7 +37,7 @@ Two ports are exposed:
 Open a browser and access noVNC at `http://<server>:6080`
 
 ## On DockerHub / GitHub
-* DockerHub [andreyurisim/ubuntu-desktop-wine](https://hub.docker.com/repository/docker/andreyurisim/ubuntu-desktop-wine)
+* DockerHub [andreyurisim/ubuntu-desktop-wine](https://hub.docker.com/r/andreyurisim/ubuntu-desktop-wine)
 * GitHub [andreyurisim/ubuntu-desktop-wine](https://github.com/andreyurisim/ubuntu-desktop-wine)
 
 # Thanks
