@@ -13,6 +13,7 @@ ENV USER=ubuntu \
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     adduser $USER --gecos "" --disabled-password && \
+    apt-get autoremove --purge apt-xapian-index && \
     apt-get update && \
     apt-get install -y \
         sudo \
