@@ -45,7 +45,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     sudo -H gpg -o /etc/apt/trusted.gpg.d/winehq.key.gpg --dearmor winehq.key && \
     rm winehq.key && \
-    add-apt-repository -y 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main' && \
+    add-apt-repository -y 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main' && \
     apt-get update && \
     apt-get install -y --install-recommends winehq-stable && \
     \
