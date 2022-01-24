@@ -1,9 +1,7 @@
-name: Create and publish docker image
+name: Docker CD
 
 on:
-  push:
-    branches:
-      - main
+  create:
     tags:
       - '*.*-build-*'
 
