@@ -55,5 +55,6 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 COPY . /container-resources
 
+
 EXPOSE 8080 5901
 CMD ["/container-resources/entrypoint.sh"]
