@@ -1,0 +1,19 @@
+name: Docker CI
+
+on:
+  pull_request:
+    branch:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    env:
+        IMAGE_TAG_BASE: andreyurisim/ubuntu-desktop-wine
+        
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ${{ env.IMAGE_TAG_BASE }}
