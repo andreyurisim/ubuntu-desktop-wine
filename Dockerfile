@@ -39,7 +39,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     \
     add-apt-repository -y ppa:kubuntu-ppa/backports && \
     apt-get update && \
-    apt-get install -y kubuntu-desktop && \
+    apt-get install -y kubuntu-desktop apt-xapian-index- && \
     \
     dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
@@ -54,8 +54,6 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     rm -rf /var/lib/apt/lists/*
 
 COPY . /container-resources
-
-
 
 EXPOSE 8080 5901
 CMD ["/container-resources/entrypoint.sh"]
