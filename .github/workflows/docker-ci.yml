@@ -18,5 +18,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{ env.IMAGE_TAG_BASE }}
     
-    - name: Teste the Docker image
-      run: docker run --rm ${{ env.IMAGE_TAG_BASE }} echo teste
+#     - name: Teste the Docker image
+#       run: timeout --preserve-status -s 0 -k 5 5 docker run --rm ${{ env.IMAGE_TAG_BASE }}
