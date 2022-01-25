@@ -39,7 +39,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     \
     add-apt-repository -y ppa:kubuntu-ppa/backports && \
     apt-get update && \
-    apt-get install -y kubuntu-desktop --exclude apt-xapian-index && \
+    apt-get install -y kubuntu-desktop --without apt-xapian-index && \
     \
     dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
