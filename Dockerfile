@@ -13,7 +13,6 @@ ENV USER=ubuntu \
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     adduser $USER --gecos "" --disabled-password && \
-    apt-get autoremove --purge apt-xapian-index && \
     apt-get update && \
     apt-get install -y \
         sudo \
@@ -40,7 +39,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     \
     add-apt-repository -y ppa:kubuntu-ppa/backports && \
     apt-get update && \
-    apt-get install -y kubuntu-desktop && \
+    apt-get install -y kubuntu-desktop --exclude apt-xapian-index && \
     \
     dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
