@@ -19,4 +19,4 @@ jobs:
       run: docker build . --file Dockerfile --tag ${{ env.IMAGE_TAG_BASE }}
     
     - name: Teste the Docker image
-      run: timeout --preserve-status -s 0 10 docker run --rm ${{ env.IMAGE_TAG_BASE }}
+      run: timeout --preserve-status -s 0 -k 5 5 docker run --rm ${{ env.IMAGE_TAG_BASE }}
